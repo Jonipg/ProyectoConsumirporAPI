@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(97, 95, 95);
+    font-family: Arial, sans-serif;
+    
+}
+
+h1 {
+    color: aqua;
+}
+h2{
+    color: black;
+}
+.btn {
+    border-radius: 50px;
+    font-size: 1.2rem;
+}

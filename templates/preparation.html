@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Preprocesamiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+     body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ADD8E6;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+</style>
+
+
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Resultados del Preprocesamiento del Dataset NSL-KDD</h1>
+
+        <!-- Tamaños de los conjuntos -->
+        <section class="mb-5">
+            <h2>Tamaños de los Conjuntos</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Entrenamiento: {{ train_size if train_size else "No disponible" }}</li>
+                <li class="list-group-item">Validación: {{ val_size if val_size else "No disponible" }}</li>
+                <li class="list-group-item">Prueba: {{ test_size if test_size else "No disponible" }}</li>
+            </ul>
+        </section>
+
+        <!-- Resumen del Preprocesamiento -->
+        <section class="mb-5">
+            <h2>Resumen del Preprocesamiento</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Número de columnas después del preprocesamiento: {{ columns_after_preprocessing if columns_after_preprocessing else "No disponible" }}
+                </li>
+            </ul>
+        </section>
+
+        <!-- Vista del dataset preprocesado -->
+        <section class="mb-5">
+            <h2>Vista de los Datos Preprocesados</h2>
+            <div class="table-responsive">
+                {% if sample_preprocessed_data %}
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                {% for col in sample_preprocessed_data[0].keys() %}
+                                    <th>{{ col }}</th>
+                                {% endfor %}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in sample_preprocessed_data %}
+                                <tr>
+                                    {% for value in row.values() %}
+                                        <td>{{ value }}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                {% else %}
+                    <p>No se encontraron datos preprocesados para mostrar.</p>
+                {% endif %}
+            </div>
+        </section>
+
+        <!-- Botón para regresar -->
+        <div class="text-center">
+            <a href="/" class="btn btn-secondary">REGRESAR</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

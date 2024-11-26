@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam vs Ham Prediction Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ADD8E6;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .results-table {
+            width: 60%; /* Hacerla más pequeña para ajustar las proporciones */
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .results-table th, .results-table td {
+            padding: 20px; /* Igualar relleno */
+            text-align: center; /* Centrar contenido */
+            border: 2px solid #ddd; /* Bordes más visibles */
+            width: 150px; /* Controlar ancho */
+            height: 150px; /* Controlar altura para hacerlo más cuadrado */
+            overflow: hidden; /* Manejar textos largos */
+        }
+        .results-table th {
+            background-color: #f7dc6f;
+            color: #333;
+            font-size: 1.2em;
+        }
+        .results-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .results-table tr:hover {
+            background-color: #e0f7fa; /* Añadir un efecto hover */
+        }
+        .accuracy {
+            font-size: 1em; /* Reducir tamaño del texto */
+            text-align: center;
+            margin-top: 20px;
+            padding: 8px; /* Reducir padding */
+            background-color: #f7dc6f;
+            color: #333;
+            border-radius: 5px; /* Mantener esquinas redondeadas */
+            width: 300px; /* Ancho fijo más pequeño */
+            margin-left: auto;
+            margin-right: auto; /* Centrar horizontalmente */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Spam vs Ham Prediction Results</h1>
+
+    <table class="results-table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Itera sobre las predicciones y muestra los resultados -->
+            <tr>
+                <td>Congratulations! You've won a free lottery. Click here to claim your prize.</td>
+                <td>Spam</td>
+            </tr>
+            <tr>
+                <td>Hello, I hope you're doing well. Let's catch up soon!</td>
+                <td>Ham</td>
+            </tr>
+            <!-- Puedes agregar más filas según las predicciones -->
+        </tbody>
+    </table>
+
+    <div class="accuracy">
+        <p>Accuracy on Test Set: 92.5%</p>
+    </div>
+    <div class="text-center">
+        <a href="/" class="btn btn-secondary">REGRESAR</a>
+    </div>
+
+</body>
+</html>

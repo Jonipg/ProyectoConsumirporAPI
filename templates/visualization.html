@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Análisis</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Resultados del Análisis del Dataset</h1>
+
+<!-- Tabla de estadísticas descriptivas -->
+<section class="mb-5">
+    <h2>Estadísticas Descriptivas</h2>
+    <p class="text-muted">A continuación, se presentan las estadísticas clave del conjunto de datos.</p>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Estadística</th>
+                    <th>arc_bytes</th>
+                    <th>duration</th>
+                    <th>count</th>
+                    <th>mean</th>
+                    <th>atd</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>500</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>100</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1000</td>
+                    <td>10</td>
+                    <td>2</td>
+                    <td>200</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>1500</td>
+                    <td>15</td>
+                    <td>3</td>
+                    <td>300</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2000</td>
+                    <td>20</td>
+                    <td>4</td>
+                    <td>400</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2500</td>
+                    <td>25</td>
+                    <td>5</td>
+                    <td>500</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>3000</td>
+                    <td>30</td>
+                    <td>6</td>
+                    <td>600</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>3500</td>
+                    <td>35</td>
+                    <td>7</td>
+                    <td>700</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>4000</td>
+                    <td>40</td>
+                    <td>8</td>
+                    <td>800</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>4500</td>
+                    <td>45</td>
+                    <td>9</td>
+                    <td>900</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>5000</td>
+                    <td>50</td>
+                    <td>10</td>
+                    <td>1000</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+        <!-- Gráficos -->
+        <section class="mb-5">
+            <h2>Gráficos Generados</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3>Distribución de 'protocol_type'</h3>
+                    <img src="/static/results/protocol_distribution.png" alt="Distribución de 'protocol_type'" class="img-fluid">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Histogramas de Duración</h3>
+                    <img src="/static/results/histograms.png" alt="Histogramas" class="img-fluid">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Matriz de Correlación</h3>
+                    <img src="/static/results/correlation_matrix.png" alt="Matriz de Correlación" class="img-fluid">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3>Scatter Matrix</h3>
+                    <img src="/static/results/scatter_matrix.png" alt="Scatter Matrix" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Botón para regresar -->
+        <div class="text-center">
+            <a href="/" class="btn btn-secondary">REGRESAR</a>
+        </div>
+    </div>
+</body>
+</html>
